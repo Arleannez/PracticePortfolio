@@ -1,0 +1,327 @@
+html{
+  scroll-behavior: smooth;
+}
+.Section-1{
+  background-color: rgb(72, 26, 109);
+  padding: 2%;
+  margin-top: 1%;
+  border-radius: 5px;
+}
+body {
+  background-color: #071230;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+p,
+h1 {
+  color: #b2f051;
+
+}* {
+  box-sizing: border-box;
+}
+
+/*Navigation*/
+nav {
+  padding: 1em;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #b2f051;
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+  nav li {
+    margin-right: 0;
+  }
+}
+
+/*Columns*/
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+ 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.Banner {
+  background-color: #121b35;
+  border-radius: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+#Banner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+/*------Fade in--------------------------------------------*/
+.Paragraph {
+  animation: fadeIn 6s 1s 1 normal both;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*Fade In  hover*/
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#Secret{
+  color: #071230; }
+
+.fade-in {
+  padding: 2%;
+  background-color: #b2f051;
+  width: 410px;
+  height: auto;
+  border-radius: 5px;
+  text-align: justify;
+  opacity: 0; /* initial opacity is 0 */
+  transition: opacity 2s; /* animate opacity over 2 seconds */
+
+  margin: 20px; /* add some margin between columns */
+}
+
+.fade-in:hover {
+  opacity: 1; /* on hover, set opacity to 1 */
+  transition-timing-function: ease-in; /* use ease-in timing function */
+}
+
+
+/*------Typer Writer---------------------------------------------------------*/
+
+.line-1{
+  position: relative;
+  top: 50%;  
+  width: auto;
+  text-align: justify;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+animation: typewriter 4s steps(44) 1s 1 normal both,
+blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+from{width: 0;}
+to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+from{border-right-color: rgba(255,255,255,.75);}
+to{border-right-color: transparent;}
+}
+
+/*Team image*/
+
+.Team {
+  border-radius: 5px;
+  background-color: #590031;
+  padding: 10px 0;
+}
+
+.Team .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.Team h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #eabc64;
+  margin-bottom: 20px;
+}
+
+.Team p {
+  font-size: 18px;
+  color: #eabc64;
+  margin-bottom: 40px;
+}
+
+.Team .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.Team .grid > div {
+  background-color: #eabc64 ;
+  padding: 20px;
+  border: 1px solid #dbe27a;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Team img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.Team h4 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4d1919;
+  margin-bottom: 10px;
+}
+
+.Team span {
+  font-size: 18px;
+  color: #8a0000;
+}
+
+@media (max-width: 768px) {
+  .Team .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .Team .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*----------------------Image Slide Show---------------------*/
+.PhotoSlideshow {
+  padding: 1%;
+  border-radius: 10px;
+  border: solid whitesmoke 2px;
+  margin-bottom: 1%;
+}
+
+.album {
+  width: auto;
+  height: 500px;
+  overflow: hidden;
+  padding: 1%;
+  background-color: aliceblue;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  animation: scroll 10s linear infinite;
+}
+
+.slides img {
+  width: auto; /* Adjusted to 10% */
+  height: auto;
+  object-fit: cover;
+  margin: 10px;
+  border-radius: 10px;
+  flex-basis: 10%; /* Adjusted to 10% */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* Portfolio Section Styles */
+#photos {
+  margin-bottom: 1%;
+  padding: 5px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#pics {
+  background-color: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.columnpics {
+  flex-basis: 25%;
+  margin: 10px;
+}
+
+.columnpics img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s; /* add transition for smooth animation */
+}
+
+.columnpics img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: popUp 0.3s forwards; /* add animation */
+}
+
+@keyframes popUp {
+  0% {
+    transform: translateY(10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
